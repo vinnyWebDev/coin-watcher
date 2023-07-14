@@ -5,24 +5,22 @@ import ShowCrypto from "./ShowCrypto";
 
 function GetCrypto() {
     const [coinData, setCoinData] = useState([]);
+    //Pull coin data from this url
+    const apiUrl ="https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false&locale=en";
 
     //Pulls coin data from our API
     useEffect(() => {
         async function getCoins() {
-            let response = await axios.get("https://rest.coinapi.io/v1/assets?filter_asset_id=BTC,ETH,USDT,BNP,USDC,XRP,ADA,DOGE,SOL,LTC", { headers: { "X-CoinAPI-Key": "8A61FE8D-FC60-47E8-855A-51DBF67DDD82" } })
+            let response = await axios.get(apiUrl);
             setCoinData(response.data);
-            console.log(coinData);
+            console.log(response.data[0]);
         }
-
         getCoins()
     }, [])
 
     return (
         <div className="container">
             <h1>Coins</h1>
-            {
-                
-            }
         </div>
     )
 }
