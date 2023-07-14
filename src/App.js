@@ -8,7 +8,9 @@ import About from './components/About';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import GetCrypto from './components/GetCrypto';
 
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path ="/fiat" element={<Fiat/>}/>
         <Route path="/about" element={<About/>}/>
+        <Route path="/getcrypto" element={<GetCrypto/>}/>
       </Routes>
     </div>
   );
