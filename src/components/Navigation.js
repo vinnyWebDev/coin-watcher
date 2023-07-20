@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function Navigation() {
     return (
-        <Navbar expand="lg" className="bg-body-tertiary">
+        <Navbar expand="lg" className="bg-body-tertiary sticky-top p-3">
             <Container>
                 <Navbar.Brand href="/">Coin Watcher</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
