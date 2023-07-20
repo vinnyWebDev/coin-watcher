@@ -21,7 +21,7 @@ function App() {
         <Route path="/about" element={<About/>}/>
         <Route path="/getcrypto" element={<GetCrypto/>}/>
       </Routes>
-
+    
     </div>
   );
 }
