@@ -8,20 +8,21 @@ import About from './components/About';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import GetCrypto from './components/GetCrypto';
+import SearchCrypto from './components/SearchCrypto';
 
 
 function App() {
   return (
-    <div>
-            <Navigation/>
-
+    <div class="bg app">
+      <Navigation />
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path ="/fiat" element={<Fiat/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/getcrypto" element={<GetCrypto/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/fiat" element={<Fiat />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/searchcrypto" element={<SearchCrypto />} />
       </Routes>
-    
+      <Footer class="footer"/>
+
     </div>
   );
 }

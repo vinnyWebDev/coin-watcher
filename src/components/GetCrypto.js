@@ -26,23 +26,25 @@ function GetCrypto() {
     }, [])
 
     return (
-        <div className="container">
+        <div className="container ">
+            <h2 className="text-center mb-4">Top 20 Crypto Currencies</h2>
             {/*}This is a form which uses bootstrap. Purpose is to filter the many coins we have pulled{*/}
             <form>
                 <InputGroup>
                     <Form.Control onChange={(e) => setQuery(e.target.value)} placeholder="Filter crypto"></Form.Control>
                 </InputGroup>
             </form>
-            {
+            <div className="container cryptoContainer rounded">           {
                 //use filter method with query to narrow down list of coins
-                coinData.filter((i)=>{
+                coinData.filter((i) => {
                     return query.toLowerCase() === "" ? i : i.id.toLowerCase().includes(query)
                 }).map(function (i, index) {
                     return (
-                        <ShowCrypto image={i.image} name={i.name} price={i.current_price} dailyPercentage={i.price_change_percentage_24h} marketCap = {i.market_cap_rank} key={i.id} />
+                        <ShowCrypto image={i.image} name={i.name} price={i.current_price} dailyPercentage={i.price_change_percentage_24h} marketCap={i.market_cap_rank} key={i.id} />
                     )
                 })
             }
+            </div> 
         </div>
     )
 }

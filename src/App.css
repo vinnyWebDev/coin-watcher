@@ -1,13 +1,18 @@
-.App {
-  text-align: center;
-  overflow: hidden;
+.app{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.test{
-  color: red;
+.bg{
+  background-color: #eff1f3;
 }
 
 /*Used for styling coin cards*/
+
+.cryptoContainer{
+  background-color: white;
+}
 
 .coinImg{
   max-width: 50px;
@@ -22,6 +27,19 @@
   align-self: center;
 }
 
-.textRight{
-  text-align: right;
+.textRed{
+  color:rgb(194, 33, 33);
+}
+
+.textGreen{
+  color: rgb(17, 179, 17);
+}
+
+.footer {
+  text-align: center;
+  margin-top: auto;
+  padding: 8px;
+  background-color: white;
+  margin-top: 60px;
+  padding: 45px;
 }
