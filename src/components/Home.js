@@ -5,7 +5,7 @@ import GetCrypto from "./GetCrypto";
 
 function Home() {
     return (
-        <div className="container mt-3">
+        <div className="container mt-3 mb-5">
             <GetCrypto></GetCrypto>
         </div>
     )

@@ -1,9 +1,9 @@
 import React from "react";
 
-function Footer (){
+function Footer() {
     return (
         <div class="footer">
-            <footer>Money Watcher 2023</footer>
+            <footer><span className="blueColor">Money</span> Watch 2023</footer>
         </div>
     )
 }
