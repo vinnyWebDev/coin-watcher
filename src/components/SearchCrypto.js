@@ -18,7 +18,7 @@ function SearchCrypto() {
             console.log("test")
             console.log(query)
             e.preventDefault();
-            let response = await axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=" + query + "&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en")
+            let response = await axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids="+query+"&order=market_cap_desc&per_page=100&page=1&sparkline=true&locale=en")
             console.log(response.data)
             setCoinData(response.data[0]);
             console.log("test2")
@@ -35,7 +35,7 @@ function SearchCrypto() {
                 </InputGroup>
             </form>
             <DetailedCrypto name={coinData.name} symbol={coinData.symbol} price={coinData.current_price}
-            highest={coinData.ath} lowest={coinData.atl} marketCap={coinData.market_cap} marketRank={coinData.market_cap_rank} image={coinData.image}/>
+            highest={coinData.ath} lowest={coinData.atl} marketCap={coinData.market_cap} marketRank={coinData.market_cap_rank} dailyPercentage={coinData.price_change_percentage_24h} image={coinData.image}/>
         </div>
     )
 }

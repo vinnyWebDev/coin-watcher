@@ -58,3 +58,50 @@
 .blueColor{
   color: #004aad;
 }
+
+/*Styling coin search Page*/
+.coinInfoFlex{
+  display: flex;
+  justify-content: space-around;
+}
+
+.coinHeading{
+ display: flex;
+ align-items: center;
+}
+
+.coinHeading h3{
+  font-weight: bold;
+  font-size: 30px;
+  margin-right: 9px;
+  margin-top: 20px;
+}
+
+.coinHeading img{
+  margin-right: 8px;
+  max-width: 30px;
+  height: auto;
+}
+
+.coinSymbol{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.coinPrice{
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.dailyChange{
+  font-size: 20px; 
+}
+
+.marketInfo p{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.marketData{
+  font-weight: 400;
+}
